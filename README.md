@@ -21,12 +21,12 @@ After running a web application in Azure Cloud Services since 2008, it was final
 
 ### New Architecture
 1. An App Service with two instances (S2) for windows that will have the following web apps.  Cost $292 a month.
-  - Site one as a web app with a staging slot (this will be ported from WebForms to MVC)
-  - Site two as a web app with a staging slot (this will be ported from WebForms to MVC)
-  - Site three as a web app (that hosts 3 sites, different themes based upon the host header) with a staging slot
-  - Site that just runs two web jobs
-    - The existing worker role will run as a continous web job
-    - A new web job that runs Let's Encrypt auto renewer: https://github.com/ohadschn/letsencrypt-webapp-renewer
+   - Site one as a web app with a staging slot (this will be ported from WebForms to MVC)
+   - Site two as a web app with a staging slot (this will be ported from WebForms to MVC)
+   - Site three as a web app (that hosts 3 sites, different themes based upon the host header) with a staging slot
+   - Site that just runs two web jobs
+     - The existing worker role will run as a continous web job
+     - A new web job that runs Let's Encrypt auto renewer: https://github.com/ohadschn/letsencrypt-webapp-renewer
 2. The classic cloud storage account will be migrated to a Azure Storage v2 account. 
 3. Four application insights accounts will be created.
    - One for site 1
