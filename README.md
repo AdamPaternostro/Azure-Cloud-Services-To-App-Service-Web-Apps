@@ -5,8 +5,7 @@ Best practices and lessons learned converting Azure Classic Cloud services to Az
 ## Migrating Azure Cloud Service to App Service Web App
 After running a web application in Azure Cloud Services since 2008, it was finally time to upgrade to a new service.  I thought about Kubernetes, Web Apps and Serverless and decided that Web Apps make the most sense.  I did not want to manage an AKS cluster and my workload was not going to require more than one or two servers.  If I ran AKS, I would want to run .NET Core on Linux, but that is a whole additional upgrade.  I liked the idea of serverless and need to get there as well.  I plan on migrating my WebJob code to serverless, but again that will require some work since my worker process code references all my main business DLLs.  Web Apps made the most sense and provided features to enhance my cloud experience.  
 
-![alt tag](https://raw.githubusercontent.com/AdamPaternostro/Azure-Cloud-Services-To-App-Service-Web-Apps
-/master/images/architecture.png)
+![alt tag](https://raw.githubusercontent.com/AdamPaternostro/Azure-Cloud-Services-To-App-Service-Web-Apps/master/images/architecture.png)
 
 
 ### Existing Architecture
